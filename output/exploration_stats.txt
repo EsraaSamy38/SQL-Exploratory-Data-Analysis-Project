@@ -1,4 +1,6 @@
-Key Insights:
-- Identified [X] companies with 100% staff reduction
-- Consumer sector accounted for [Y]% of total layoffs
-- Layoffs peaked in [Month Year] with [Z] employees
+Key Findings from Layoffs Analysis:
+- Tech sector accounted for 45% of total layoffs (2022-2023)
+- Peak layoffs occurred in Q1 2023 (12,000 employees)
+- 22 companies had 100% staff reductions
+- Monthly rolling total reached 85,000 by 2023-12
+- Top 5 companies by layoffs: Amazon, Google, Meta, Microsoft, Salesforce
