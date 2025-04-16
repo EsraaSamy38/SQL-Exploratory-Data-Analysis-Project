@@ -1,4 +1,6 @@
-metric,value
-max_single_layoff,12000
-most_affected_industry,Consumer
-peak_layoff_month,2023-03-01
+metric,value,time_period,detail
+max_single_layoff,12000,2023,Company: Amazon
+peak_monthly_layoffs,8500,2023-03,Industry: Tech
+top_industry_affected,Consumer,2022-2023,Total: 25000
+complete_staff_reductions,22,all-time,100% workforce cuts
+highest_funded_cut,500,2023,Company: Bolt ($300M raised)
