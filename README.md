@@ -48,7 +48,7 @@ where ranking <= 5;
 ## 🚀 How to Use
 1. Run [SQL_Lyoffs_Exploratory_Data_Analysis](SQL_Lyoffs_Exploratory_Data_Analysis_Project.sql) in MySQL Workbench  
 2. View results in `output`📄 folder:  
-   - [analysis_samples](output/analysis_samples.csv)   (10-row data preview)  
+   - [analysis_samples](output/analysis_samples.csv)   (20-row data preview)  
    - [exploration_stats](output/exploration_stats.txt) (exploration summary)
 
   
