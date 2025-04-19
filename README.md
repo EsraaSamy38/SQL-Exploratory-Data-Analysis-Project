@@ -53,9 +53,9 @@ where ranking <= 5;
 
   
 ## 💡 Skills Demonstrated
-- Data Analysis: Trend identification, Metric calculation, Comparative analysis
-- SQL Expertise: Window functions, CTEs, Date manipulation, Complex aggregations
-- Business Acumen: Workforce analytics, Risk assessment, Strategic planning
+- Data Analysis:  Trend identification, Metric calculation, Comparative analysis
+- SQL Expertise:  Window functions, CTEs, Date manipulation, Complex aggregations
+- Business Acumen:  Workforce analytics, Risk assessment, Strategic planning
 
 
 ## 📁 Data Source
