@@ -1,4 +1,4 @@
- Layoffs Data Exploration - Key Statistics
+ 🔍SQL Layoffs Data Exploration Summary 🔍
 
  🏆 Top 5 Companies Analysis:
     ▫️ Highest single-year layoffs: Uber (7,525 employees in 2020)
@@ -19,7 +19,7 @@
       - NULL handling: Explicit checks for NULL dates
       - Grouping: Aggregated by company/year/month
 
-🔍 How to Interpret:
+🧠 How to Interpret:
    ▫️ Company rankings show workforce reduction severity
    ▫️ Rolling totals reveal cumulative economic impact
 
