@@ -64,13 +64,3 @@ where ranking <= 5;
 This dataset includes information about Layoffing of employees in companies over 3 years (2020-2023)
 
 
-
-### 📊 Top Company Layoffs by Year (2021–2023)
-
-| **Year** | **Ranking** | Company     | Total Layoffs |
-|----------|-------------|-------------|----------------|
-| 2021     | 1           | Company A   | 5,000          |
-| 2021     | 2           | Company B   | 3,500          |
-| 2022     | 1           | Company C   | 10,000         |
-| 2023     | 1           | Company D   | 12,000         |
-| 2023     | 2           | Company E   | 8,500          |
