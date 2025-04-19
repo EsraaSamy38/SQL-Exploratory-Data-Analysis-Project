@@ -41,12 +41,12 @@ from rolling_total;
 2. View results in `output`📄 folder:  
    - [analysis_samples](output/analysis_samples.csv)   (10-row data preview)  
    - [exploration_stats](output/exploration_stats.txt) (exploration summary)
+
   
-
-
-
-
-
+## 💡 Skills Demonstrated
+- Data Analysis: Trend identification, Metric calculation, Comparative analysis
+- SQL Expertise: Window functions, CTEs, Date manipulation, Complex aggregations
+- Business Acumen: Workforce analytics, Risk assessment, Strategic planning
 
 
 ## 📁 Data Source
