@@ -1,26 +1,26 @@
-# Layoffs Data Exploration - Key Statistics
+ Layoffs Data Exploration - Key Statistics
 
-## 🏆 Top 5 Companies Analysis
-▫️ Highest single-year layoffs: Uber (7,525 employees in 2020)
-▫️ Most frequent in top 5: Amazon (2 appearances across years)
-▫️ Worst year: 2022 with 160,661 total layoffs 
+ 🏆 Top 5 Companies Analysis
+    ▫️ Highest single-year layoffs: Uber (7,525 employees in 2020)
+    ▫️ Most frequent in top 5: Amazon (2 appearances across years)
+    ▫️ Worst year: 2022 with 160,661 total layoffs 
 
-## 📈 Trends
-▫️ Industry dominance: Consumer industry is the hightest of top-5 layoffs 
-▫️ Seasonal pattern: January had highest layoffs
-▫️ Date range: [2020-03-11] to [2023-03-06] 
+📈 Trends
+   ▫️ Industry dominance: Consumer industry is the hightest of top-5 layoffs 
+   ▫️ Seasonal pattern: January had highest layoffs
+   ▫️ Date range: [2020-03-11] to [2023-03-06] 
 
-## ⚙️ Technical Execution
-▫️ SQL features used:
-  - 2 CTEs in top companies analysis
-  - Window functions: DENSE_RANK(), SUM() OVER()
-  - Date functions: YEAR(), SUBSTRING()
-▫️ Data quality:
-  - NULL handling: Explicit checks for NULL dates
-  - Grouping: Aggregated by company/year/month
+⚙️ Technical Execution
+   ▫️ SQL features used:
+      - 2 CTEs in top companies analysis
+      - Window functions: DENSE_RANK(), SUM() OVER()
+      - Date functions: YEAR(), SUBSTRING()
+   ▫️ Data quality:
+      - NULL handling: Explicit checks for NULL dates
+      - Grouping: Aggregated by company/year/month
 
-## 🔍 How to Interpret
-▫️ Company rankings show workforce reduction severity
-▫️ Rolling totals reveal cumulative economic impact
+🔍 How to Interpret
+   ▫️ Company rankings show workforce reduction severity
+   ▫️ Rolling totals reveal cumulative economic impact
 
 
