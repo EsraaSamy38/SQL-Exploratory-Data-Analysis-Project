@@ -1,32 +1,26 @@
 # Layoffs Data Exploration - Key Statistics
 
 ## 🏆 Top 5 Companies Analysis
-- Derived from: "TOP 5 COMPANIES PER YEAR" query
-- Methodology: Used DENSE_RANK() to handle ties fairly
-- Output columns: company, years, total_laid_off,industry, ranking
+▫️ Highest single-year layoffs: Uber (7,525 employees in 2020)
+▫️ Most frequent in top 5: Amazon (2 appearances across years)
+▫️ Worst year: 2022 with 160,661 total layoffs 
 
 ## 📈 Trends
-- Temporal analysis: "Monthly layoffs with rolling total" query
-- Key metric: Rolling sum calculated via SUM() OVER()
-- Date range: [INSERT_MIN_DATE] to [INSERT_MAX_DATE] (from your date range query)
+▫️ Industry dominance: Consumer industry is the hightest of top-5 layoffs 
+▫️ Seasonal pattern: January had highest layoffs
+▫️ Date range: [2020-03-11] to [2023-03-06] 
 
 ## ⚙️ Technical Execution
-- SQL features used:
+▫️ SQL features used:
   - 2 CTEs in top companies analysis
   - Window functions: DENSE_RANK(), SUM() OVER()
   - Date functions: YEAR(), SUBSTRING()
-- Data quality:
+▫️ Data quality:
   - NULL handling: Explicit checks for NULL dates
   - Grouping: Aggregated by company/year/month
 
-## 🔍 How to Replicate
-1. Run "TOP 5 COMPANIES PER YEAR" query
-2. Execute "Monthly layoffs with rolling total" for trends
-3. Combine with industry/country aggregates as needed
+## 🔍 How to Interpret
+▫️ Company rankings show workforce reduction severity
+▫️ Rolling totals reveal cumulative economic impact
 
-## ✅ Verification Notes
-- All metrics directly from your SQL file
-- No hypothetical numbers included
-- Double-check:
-  - Your date range via: SELECT MIN(`date`), MAX(`date`) FROM layoffs_staging_1
-  - Top companies via the ranked query
+
