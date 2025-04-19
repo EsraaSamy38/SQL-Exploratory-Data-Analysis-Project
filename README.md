@@ -1,7 +1,7 @@
 # 📊 Layoffs Data Exploration - SQL Project
 
 ## 🌟 Overview
-This SQL project explores trends in company layoffs using a comprehensive dataset. The analysis provides insights into workforce reductions across companies, industries, and geographies.
+This SQL project explores trends in company layoffs using a comprehensive dataset. The analysis includes core metrics, temporal trends, and industry-specific insights to understand workforce reductions across different dimensions.
 
 ## 🔍 Key Features
 
@@ -23,14 +23,15 @@ This SQL project explores trends in company layoffs using a comprehensive datase
 ## 💻 Technical Highlights
 
 ```sql
--- Example of advanced query from project
-WITH rolling_total AS (
-  SELECT SUBSTRING(`date`,1,7) AS `month`, 
-         SUM(total_laid_off) AS total_off
-  FROM layoffs_staging_1
-  GROUP BY `month`
+# Example of advanced query from my project
+with rolling_total as
+(
+select substring(`date`,1,7) as `month`,
+       sum(total_laid_off) as total_off
+from layoffs_staging_1
+where substring(`date`,1,7) is not null
+group by `month`
+order by 1 asc 
 )
-SELECT `month`,
-       total_off,
-       SUM(total_off) OVER(ORDER BY `month`) AS running_total
-FROM rolling_total;
+select `month`, total_off, sum(total_off) over(order by `month`)as rol_total
+from rolling_total;
