@@ -20,21 +20,30 @@ This SQL project explores trends in company layoffs using a comprehensive datase
 - Uses DENSE_RANK() to handle ties fairly
 - Compares performance across different years
 
-## 💻 Technical Highlights
+## 💻 Highlight Analysis: Annual Layoff Leaders
 
 ```sql
-# Example of advanced query from my project
-with rolling_total as
+-- =============================================
+-- TOP 5 COMPANIES BY LAYOFFS PER YEAR 
+-- Uses DENSE_RANK() to handle ties fairly
+-- Shows which companies were most affected each year
+-- =============================================
+with company_year (company, years, total_laid_off) as
 (
-select substring(`date`,1,7) as `month`,
-       sum(total_laid_off) as total_off
+select company,year(`date`),sum(total_laid_off)
 from layoffs_staging_1
-where substring(`date`,1,7) is not null
-group by `month`
-order by 1 asc 
+group by company,year(`date`) 
+), company_year_rank as
+(
+select*,
+dense_rank() over(partition by years order by total_laid_off desc) as ranking
+from company_year
+where years is not null
 )
-select `month`, total_off, sum(total_off) over(order by `month`)as rol_total
-from rolling_total;
+select*
+from company_year_rank
+where ranking <= 5;
+
 ```
 ## 🚀 How to Use
 1. Run [SQL_Lyoffs_Exploratory_Data_Analysis](SQL_Lyoffs_Exploratory_Data_Analysis.sql) in MySQL Workbench  
