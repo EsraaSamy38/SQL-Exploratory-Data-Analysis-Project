@@ -40,4 +40,17 @@ from rolling_total;
 1. Run [SQL_Lyoffs_Exploratory_Data_Analysis](SQL_Lyoffs_Exploratory_Data_Analysis.sql) in MySQL Workbench  
 2. View results in `output`📄 folder:  
    - [analysis_samples](output/analysis_samples.csv)   (10-row data preview)  
-   - [exploration_stats](output/exploration_stats.txt) (exploration summary)  
+   - [exploration_stats](output/exploration_stats.txt) (exploration summary)
+  
+
+
+
+
+
+
+
+## 📁 Data Source
+
+- [Download Layoffs_Dataset (Excel)](Layoffs_Dataset.xlsx)📄 
+This dataset includes information about Layoffing of employees in companies over 3 years (2020-2023)
+
