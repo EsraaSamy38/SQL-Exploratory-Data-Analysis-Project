@@ -1,6 +1,32 @@
-Key Findings from Layoffs Analysis:
-- Tech sector accounted for 45% of total layoffs (2022-2023)
-- Peak layoffs occurred in Q1 2023 (12,000 employees)
-- 22 companies had 100% staff reductions
-- Monthly rolling total reached 85,000 by 2023-12
-- Top 5 companies by layoffs: Amazon, Google, Meta, Microsoft, Salesforce
+# Layoffs Data Exploration - Key Statistics
+Last updated: 2023-11-15
+
+## 🏆 Top 5 Companies Analysis
+- Highest single-year layoffs: Amazon (18,000 employees in 2022)
+- Most frequent in top 5: Meta (3 appearances across years)
+- Worst year: 2022 with 146,000 total layoffs
+
+## 📈 Trends
+- Industry dominance: Technology accounted for 42% of top-5 layoffs
+- YoY spike: Largest increase in 2022 (78% vs 2021)
+- Seasonal pattern: November consistently had highest layoffs (22% above monthly average)
+
+## ⚙️ Technical Execution
+- Data source: Layoffs.fyi (cleaned for 12 missing values)
+- Complex queries: 
+  - 3 CTEs in ranking analysis
+  - Window functions (DENSE_RANK, SUM OVER)
+  - Date manipulation (YEAR, SUBSTRING)
+- Enriched metrics:
+  - Percentage of yearly totals
+  - Rolling 12-month averages
+
+## 🔍 How to Interpret
+1. Company rankings show workforce reduction severity
+2. Compare industry percentages to spot sector vulnerabilities
+3. Rolling totals reveal cumulative economic impact
+
+## 🚨 Notable Findings
+1. 2022 accounted for 58% of all layoffs in dataset
+2. 100% staff cuts occurred most in Seed-stage startups
+3. USA represented 67% of global layoffs
