@@ -1,24 +1,36 @@
-# Layoffs Data Exploration Project
+# 📊 Layoffs Data Exploration - SQL Project
 
-SQL project analyzing trends in company layoffs data.
+## 🌟 Overview
+This SQL project explores trends in company layoffs using a comprehensive dataset. The analysis provides insights into workforce reductions across companies, industries, and geographies.
 
-## 🔍 Key Analyses Performed
-1. **Aggregate Metrics**:
-   - Max layoffs and percentages
-   - Date range of dataset
-2. **Trend Analysis**:
-   - Layoffs by company, industry, country, and year
-   - Monthly rolling totals
-3. **Rankings**:
-   - Top 5 companies by layoffs per year
-   - Companies with 100% staff reduction
+## 🔍 Key Features
 
-## 🚀 How to Use
-1. Run `SQL(2).sql` in your MySQL environment
-2. View analysis samples in `/output` folder
+### 📈 Core Analysis
+- Identifies maximum single layoff and percentage cuts
+- Examines companies with 100% staff reductions
+- Analyzes layoffs by company, industry, country, and stage
 
-## 💡 Skills Demonstrated
-- SQL data aggregation
-- Trend analysis with window functions
-- CTEs and subqueries
-- Data visualization through queries
+### 🕰️ Temporal Trends
+- Tracks monthly and yearly layoff patterns
+- Calculates rolling totals for cumulative impact
+- Identifies seasonal trends and year-over-year changes
+
+### 🏆 Top Performers Analysis
+- Ranks top 5 companies by layoff volume each year
+- Uses DENSE_RANK() to handle ties fairly
+- Compares performance across different years
+
+## 💻 Technical Highlights
+
+```sql
+-- Example of advanced query from project
+WITH rolling_total AS (
+  SELECT SUBSTRING(`date`,1,7) AS `month`, 
+         SUM(total_laid_off) AS total_off
+  FROM layoffs_staging_1
+  GROUP BY `month`
+)
+SELECT `month`,
+       total_off,
+       SUM(total_off) OVER(ORDER BY `month`) AS running_total
+FROM rolling_total;
