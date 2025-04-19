@@ -1,32 +1,32 @@
 # Layoffs Data Exploration - Key Statistics
-Last updated: 2023-11-15
 
 ## 🏆 Top 5 Companies Analysis
-- Highest single-year layoffs: Amazon (18,000 employees in 2022)
-- Most frequent in top 5: Meta (3 appearances across years)
-- Worst year: 2022 with 146,000 total layoffs
+- Derived from: "TOP 5 COMPANIES PER YEAR" query
+- Methodology: Used DENSE_RANK() to handle ties fairly
+- Output columns: company, years, total_laid_off,industry, ranking
 
 ## 📈 Trends
-- Industry dominance: Technology accounted for 42% of top-5 layoffs
-- YoY spike: Largest increase in 2022 (78% vs 2021)
-- Seasonal pattern: November consistently had highest layoffs (22% above monthly average)
+- Temporal analysis: "Monthly layoffs with rolling total" query
+- Key metric: Rolling sum calculated via SUM() OVER()
+- Date range: [INSERT_MIN_DATE] to [INSERT_MAX_DATE] (from your date range query)
 
 ## ⚙️ Technical Execution
-- Data source: Layoffs.fyi (cleaned for 12 missing values)
-- Complex queries: 
-  - 3 CTEs in ranking analysis
-  - Window functions (DENSE_RANK, SUM OVER)
-  - Date manipulation (YEAR, SUBSTRING)
-- Enriched metrics:
-  - Percentage of yearly totals
-  - Rolling 12-month averages
+- SQL features used:
+  - 2 CTEs in top companies analysis
+  - Window functions: DENSE_RANK(), SUM() OVER()
+  - Date functions: YEAR(), SUBSTRING()
+- Data quality:
+  - NULL handling: Explicit checks for NULL dates
+  - Grouping: Aggregated by company/year/month
 
-## 🔍 How to Interpret
-1. Company rankings show workforce reduction severity
-2. Compare industry percentages to spot sector vulnerabilities
-3. Rolling totals reveal cumulative economic impact
+## 🔍 How to Replicate
+1. Run "TOP 5 COMPANIES PER YEAR" query
+2. Execute "Monthly layoffs with rolling total" for trends
+3. Combine with industry/country aggregates as needed
 
-## 🚨 Notable Findings
-1. 2022 accounted for 58% of all layoffs in dataset
-2. 100% staff cuts occurred most in Seed-stage startups
-3. USA represented 67% of global layoffs
+## ✅ Verification Notes
+- All metrics directly from your SQL file
+- No hypothetical numbers included
+- Double-check:
+  - Your date range via: SELECT MIN(`date`), MAX(`date`) FROM layoffs_staging_1
+  - Top companies via the ranked query
