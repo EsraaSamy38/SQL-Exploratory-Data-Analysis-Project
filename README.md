@@ -35,3 +35,9 @@ order by 1 asc
 )
 select `month`, total_off, sum(total_off) over(order by `month`)as rol_total
 from rolling_total;
+```
+## 🚀 How to Use
+1. Run [SQL_Lyoffs_Exploratory_Data_Analysis](SQL_Lyoffs_Exploratory_Data_Analysis.sql) in MySQL Workbench  
+2. View results in `output`📄 folder:  
+   - [analysis_samples](output/analysis_samples.csv)   (10-row data preview)  
+   - [exploration_stats](output/exploration_stats.txt) (exploration summary)  
