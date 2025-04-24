@@ -1,6 +1,5 @@
 # 📊 Layoffs Data Exploration - SQL Project
 
-## 🌟 Overview
 This SQL project explores trends in company layoffs using a comprehensive dataset. The analysis includes core metrics, temporal trends, and industry-specific insights to understand workforce reductions across different dimensions.
 
 ## 🔍 Key Features
